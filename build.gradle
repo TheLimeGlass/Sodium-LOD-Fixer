@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'net.fabricmc.fabric-loom-remap' version '1.15-SNAPSHOT'
 	id 'maven-publish'
 	id 'java'
 	id 'idea'
@@ -17,19 +17,19 @@ repositories {
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	minecraft 'com.mojang:minecraft:1.21.11'
 	mappings loom.officialMojangMappings()
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation 'net.fabricmc:fabric-loader:0.18.6'
 
-	modImplementation "com.moulberry:mixinconstraints:${project.mixinconstraints_version}"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-	modImplementation "maven.modrinth:sodium:${project.sodium_version}"
+	modImplementation 'net.fabricmc.fabric-api:fabric-api:0.141.3+1.21.11'
+	modImplementation 'maven.modrinth:sodium:mc1.21.11-0.8.7-fabric'
+	modImplementation 'com.moulberry:mixinconstraints:1.1.0'
 }
 
 processResources {
-	inputs.property "version", project.version
-	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
+	inputs.property 'version', project.version
+	filesMatching('fabric.mod.json') {
+		expand 'version': inputs.properties.version
 	}
 }
 
@@ -44,5 +44,5 @@ java {
 }
 
 jar {
-	inputs.property "archivesName", project.base.archivesName
+	inputs.property 'archivesName', project.base.archivesName
 }
