@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "me.limeglass.sodiumfixer.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"SodiumOcclusionCullerMixin"
+	],
+	"plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

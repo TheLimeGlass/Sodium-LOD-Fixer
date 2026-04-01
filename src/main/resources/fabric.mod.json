@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "sodium-lod-fixer",
+	"version": "${version}",
+	"name": "sodium-lod-fixer",
+	"description": "Improves Sodium performance drastically for LOD rendering mods",
+	"authors": [
+		"LimeGlass"
+	],
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "me.limeglass.sodiumfixer.SodiumLODFixer"
+		]
+	},
+	"mixins": [
+		"sodium-lod-fixer.mixins.json"
+	],
+	"dependencies": {
+		"sodium": ">=0.8.0"
+	},
+	"depends": {
+		"fabricloader": ">=0.18.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
