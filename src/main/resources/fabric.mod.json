@@ -16,10 +16,8 @@
 	"mixins": [
 		"sodium-lod-fixer.mixins.json"
 	],
-	"dependencies": {
-		"sodium": ">=0.8.0"
-	},
 	"depends": {
+		"sodium": ">=0.8.0",
 		"fabricloader": ">=0.18.0",
 		"minecraft": "~1.21.11",
 		"java": ">=21",

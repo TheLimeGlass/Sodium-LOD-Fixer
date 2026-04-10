@@ -63,8 +63,8 @@ public abstract class SodiumOcclusionCullerMixin {
 
 		// Pre-compute a cheap chunk-level distance threshold for early rejection.
 		// Each chunk section is 16 blocks wide; convert searchDistance from blocks to chunk sections,
-		// add 1 for margin (partially-in-range sections at edges), then square it.
-		final int chunkRadius = ((int) searchDistance >> 4) + 2;
+		// add margin for pre-loading chunks before frustum becomes visible (prevents async pop-in).
+		final int chunkRadius = ((int) searchDistance >> 4) + 6;  // Increased margin from 2 to 4
 		final int chunkRadiusSq = chunkRadius * chunkRadius;
 
 		RenderSection section;

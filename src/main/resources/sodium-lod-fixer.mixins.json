@@ -3,7 +3,9 @@
 	"package": "me.limeglass.sodiumfixer.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"SodiumOcclusionCullerMixin"
+		"SodiumOcclusionCullerMixin",
+		"SodiumRenderSectionManagerMixin",
+		"SodiumRenderSectionMixin"
 	],
 	"plugin": "com.moulberry.mixinconstraints.ConstraintsMixinPlugin",
 	"injectors": {
